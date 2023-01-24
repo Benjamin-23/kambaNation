@@ -9,7 +9,7 @@ const links = ["Home", "About", "Contact"];
 
 <Layout title="Welcome to Astro.">
 	<main>
-		<div class="hero-bg h-screen flex flex-col gap-6">
+		<div class="hero-bg flex flex-col gap-6 h-screen">
 			<div class="flex justify-between mx-2 items-center">
 				<div class="flex gap-2">
 					<img
@@ -33,7 +33,7 @@ const links = ["Home", "About", "Contact"];
 				<img src="/assets/images/profile.svg" alt=" loading" />
 			</div>
 			<div class="w-full flex flex-col justify-center items-center gap-4">
-				<p class="text-[#C0B7E8] text-3xl">
+				<p class="text-[#C0B7E8] text-3xl text-linear font-boldpm run ">
 					Dive <span class="text-white text-xl"
 						>Into The Depths <br /> of</span
 					> Virtural Reality
@@ -41,11 +41,27 @@ const links = ["Home", "About", "Contact"];
 				<button class="bg-[#8176AF] liner p-4 text-sm rounded-2xl w-4/5"
 					>BUILD YOUR WORLD</button
 				>
-				<div class="location-bg flex w-[90%]  text-white justify-center p-4 gap-2">
-					<img src="/assets/images/previous.svg" alt="loading" class="w-4">
-					<img src="/assets/images/location.svg" alt="loading" class="w-8">
-					<span class="text-sm p-0" >Union St, Seattle, WA 98101, United States</span>
-					<img src="/assets/images/next.svg" alt="loading" class="w-4">
+				<div
+					class="location-bg flex w-[90%] text-white justify-center p-4 gap-2"
+				>
+					<img
+						src="/assets/images/previous.svg"
+						alt="loading"
+						class="w-4"
+					/>
+					<img
+						src="/assets/images/location.svg"
+						alt="loading"
+						class="w-8"
+					/>
+					<span class="text-sm p-0"
+						>Union St, Seattle, WA 98101, United States</span
+					>
+					<img
+						src="/assets/images/next.svg"
+						alt="loading"
+						class="w-4"
+					/>
 				</div>
 			</div>
 		</div>
@@ -70,5 +86,12 @@ const links = ["Home", "About", "Contact"];
 			/* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
 		box-shadow: 0px 4px 4px rgba(192, 183, 232, 0.01);
 		border-radius: 90px;
+	}
+	text-linear {
+		background: linear-gradient(91.57deg, #c0b7e8 -1.02%, #8176af 36.25%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		text-fill-color: transparent;
 	}
 </style>
