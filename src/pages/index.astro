@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import NavLinks from "../components/NavLinks.astro";
+import Hamburger from "../components/Hamburger.astro";
 
 let activeLink = true;
 const links = ["Home", "About", "Contact"];
@@ -23,23 +24,29 @@ const links = ["Home", "About", "Contact"];
 					/>
 				</div>
 				<div class="">
-					<img
-						src="/assets/images/Hamburger-Button.svg"
-						alt="loading"
-						class="mt-4"
-					/>
-					<ul>
-						{
-							links.map((link) => (
-								<a href="/"><li>{link}</li></a>
-							))
-						}
-					</ul>
+					<Hamburger />
+					<!-- <NavLinks /> -->
 				</div>
 			</div>
 			<!-- profile  -->
 			<div class="p-2 flex justify-center">
 				<img src="/assets/images/profile.svg" alt=" loading" />
+			</div>
+			<div class="w-full flex flex-col justify-center items-center gap-4">
+				<p class="text-[#C0B7E8] text-3xl">
+					Dive <span class="text-white text-xl"
+						>Into The Depths <br /> of</span
+					> Virtural Reality
+				</p>
+				<button class="bg-[#8176AF] liner p-4 text-sm rounded-2xl w-4/5"
+					>BUILD YOUR WORLD</button
+				>
+				<div class="location-bg flex w-[90%]  text-white justify-center p-4 gap-2">
+					<img src="/assets/images/previous.svg" alt="loading" class="w-4">
+					<img src="/assets/images/location.svg" alt="loading" class="w-8">
+					<span class="text-sm p-0" >Union St, Seattle, WA 98101, United States</span>
+					<img src="/assets/images/next.svg" alt="loading" class="w-4">
+				</div>
 			</div>
 		</div>
 	</main>
@@ -49,5 +56,19 @@ const links = ["Home", "About", "Contact"];
 	.hero-bg {
 		background-image: url("/assets/images/bacgroundMd.svg");
 		background-repeat: no-repeat;
+	}
+	.liner {
+		background: linear-gradient(90deg, #8176af 0%, #c0b7e8 100%);
+		border-radius: 40px;
+	}
+	.location-bg {
+		background: radial-gradient(
+				50% 2900.76% at 50% 53.89%,
+				rgba(58, 52, 86, 0.95) 0%,
+				#211e2e 100%
+			)
+			/* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+		box-shadow: 0px 4px 4px rgba(192, 183, 232, 0.01);
+		border-radius: 90px;
 	}
 </style>
